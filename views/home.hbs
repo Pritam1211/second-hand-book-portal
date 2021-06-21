@@ -1,0 +1,18 @@
+
+<span>
+{{# each book}}
+	<div class="book-card">
+    <div class="card">
+      <img src="images/{{this.coverpage}}" class="card-img-top" alt="...">
+      <div class="content">
+        <p>{{this.name}}</p>
+        <p>{{this.author}}</p>
+        <p>{{this.proposed_id}}</p>
+      </div>
+        <div class="links">
+          <a href="bookdetail?id={{this.book_id}}" class="card-link">Open</a>
+        </div>
+    </div>
+  </div>
+{{/each}}
+</span>

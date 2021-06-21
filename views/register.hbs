@@ -1,0 +1,66 @@
+     {{# if er}}
+  <div class="alert alert-danger" role='alert'>
+    {{er}}
+  </div>
+{{/if}}
+
+      <div class = "register">
+        <h2>Register Here</h2>
+      <form method="post" id="register" action="">
+          
+          Name: <br>
+          <div class='data'>
+          <div>
+            <label> First </label><br>
+            <input type="text" name="first" id="name"
+            placeholder="First" style="width:150px;" required>
+          </div>
+          <div style="margin-left:10px; width:150px">
+            <label> Middle </label><br>
+            <input type="text" name="middle" id="name"
+            placeholder="Middle" style="width:150px;" required>
+          </div>
+          <div style="margin-left:10px; width:150px;">
+            <label> Last </label><br>
+            <input type="text" name="last" id="name"
+            placeholder="Last" style="width:150px;" required><br><br>
+          </div>
+          </div>
+          <label> Address: </label><br>
+          <input type="text" name="address" id="add"
+          placeholder="Enter your address" required><br><br>
+          <div class='data'>
+          <div>
+            <label> City: </label><br>
+            <input type="text" name="city" id='num' 
+                placeholder="Enter City" required>
+          </div>
+          <div style="margin-left:10px;">
+      		  <label> Pin Code: </label><br>
+      		  <input type="number" name="pin" id="num"
+                placeholder="Enter Pin Code" required><br><br>
+          </div>
+          </div>  
+          <label> Mobile Number: </label><br>
+          <select id="ph">
+            <option>+91</option>
+            <option>+99</option>
+            <option>+10</option>
+            <option>+30</option>
+            <option>+20</option>
+           </select>
+           <input type="number" name="phone_no" id="num"
+          placeholder="Enter your mobile number"><br><br> 
+          <label> Email: </label><br>
+          <input type="email" name="email_id" id="name"
+          placeholder="Enter your Email" required><br><br>
+          <label> Password: </label><br>
+          <input type="password" name="password" id="name"
+          placeholder="Enter your password" required><br><br>
+          <input type = "radio" name="gender" value="M" id="male"><span
+          id="male">&nbsp; Male</span>&nbsp;&nbsp;
+          <input type = "radio" name="gender" value="F" id="male"><span
+          id="male">&nbsp; Female</span>&nbsp;&nbsp;<br><br>
+         <center><button type="submit" class="btn btn-primary" style="margin-bottom:20px;">Submit</button></center> 
+      </form>
+      </div>

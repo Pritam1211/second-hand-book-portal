@@ -1,0 +1,92 @@
+<div style="display: flex;">
+<div class="wrapper">
+    <div class="left">
+        <img src="images/{{book.coverpage}}" 
+        alt="user" width="200" height="250">
+        <h4>{{book.name}}</h4>
+         <p>{{book.author}}</p>
+          <div class="links">
+        
+          <form method="POST" action="/user/bookdelete" style="margin-left:120px">
+            <input type="hidden" name="id" value={{{book.book_id}}}>
+            <button type="submit" class="btn btn-primary" >Delete</button>
+          </form>
+                    </div>
+    </div>
+    <div class="right">
+      <div class="info">
+          <h3>Information</h3>
+          <div class="info_data">
+               <div class="data">
+                    <h5>Description:</h5>
+                  <p> {{book.description}} </p>
+               </div>
+               <div class="data">
+                 <h5>Genre:  </h5>
+                  <p>{{book.genre}}</p>
+               </div>
+            </div>
+      </div>
+      
+      <div class="projects">
+            <h3>Price</h3>
+            <div class="projects_data" style="display:flex;">
+                 <div class="data" style="width:200px;">
+                    <h5>Actual:</h5>
+                    <p>&nbsp;{{book.actual_price}} Rs</p>
+                 </div>
+                 <div class="data" style="margin-left=0px;">
+                   <h5>Proposed:  </h5>
+                    <p>&nbsp;{{book.proposed_id}} Rs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              </div>
+            </div>
+      </div>
+      
+    </div>
+
+  </div>
+
+<div class="request">
+  <h3>Request</h3>
+  {{# if req}}
+    <center><h4>No request</h4></center>
+    {{else}}
+    <h5>{{request.name}}</h5>
+    {{# if accept}}
+      <div class="sect">
+        <form method="POST" action="/user/accept" >
+          <input type="hidden" name="book" value={{{book.book_id}}}> 
+          <input type="hidden" name="id" value={{{request.request_id}}}>
+          <button type="submit" class="btn btn-primary" >Accept</button>
+        </form>
+        <form method="POST" action="/user/reject" style="margin-left: 100px;">
+          <input type="hidden" name="book" value={{{book.book_id}}}>
+          <input type="hidden" name="id" value={{{request.request_id}}}>
+          <button type="submit" class="btn btn-primary">Reject</button>
+        </form>
+      </div>
+    {{else}}
+      <div class="sect">
+        <a href="profile?id={{request.buyer}}" style="text-decoration: none;"><i class="fa fa-user" style="font-size:20px;"></i>&nbsp;&nbsp;Profile</a>
+      </div>  
+
+      <h5 style="padding: 10px">Deal</h5>
+      <div class="sect">
+        
+        <form method="POST" action="/user/successfull">
+          <input type="hidden" name="book" value={{{book.book_id}}}>
+          <input type="hidden" name="id" value={{{request.request_id}}}>
+          <button type="submit" class="btn btn-primary">Successfull</button>
+        </form>
+        <form method="POST" action="/user/cancle" style="margin-left: 80px;">
+          <input type="hidden" name="id" value={{{request.request_id}}}>
+          <input type="hidden" name="book" value={{{book.book_id}}}>
+          <button type="submit" class="btn btn-primary">Cancle</button>
+        </form>
+      </div>
+  {{/ if}}
+
+  {{/if}}
+</div>
+
+</div>

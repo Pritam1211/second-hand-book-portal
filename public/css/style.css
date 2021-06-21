@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	width:100%;
+	height: 100%;
+	flex-direction: column;
+	display: flex;	
+}
+
+/*login*/
+
+.login{
+	width: 400px;
+	height: 400px;
+	margin: 45px auto;
+	background-color: #163172;
+	color: #ffffff;
+}
+
+.heading{
+	margin: 10px auto;
+	color:  #46b3e6;
+	width: 300px;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.login-form{
+	margin: 30px;
+}
+
+.login-form .input-field{
+	width: 300px;
+	margin: 25px;
+	border-bottom: 1px solid #fff;
+	padding:5px;
+}
+
+.login-form input{
+	color: #fff;
+	outline: none;
+	border: none;
+	width: 250px;
+	background: transparent;
+	margin-left: 5px;
+	letter-spacing: 2px;
+}
+
+
+.signup{
+	border-top: 1px solid #fff;
+	text-align: center;
+	line-height: 60px;
+}
+
+.add-book-form .btn,
+.login .btn {
+	width: 300px;
+	margin: 15px;
+	background-color: #163172;
+	border: 1px solid #fff;
+}
+
+.link{
+	text-decoration: none;
+	color: #46b3e6;
+
+}
+
+/*add book*/
+.book-add{
+	margin: 30px auto;
+	background-color: #163172;
+	color: #ffffff;
+}
+
+.book-add .heading{
+	width: 100%;
+	border-bottom: 1px solid #fff;
+}
+
+.add-book-form{
+	padding: 30px;
+	min-height: 700px;
+}	
+
+
+.add-book-form .input-field{
+	width: 300px;
+	margin: 25px;
+	padding:5px;
+}
+
+.add-book-form .input-field input{
+	color: #fff;
+	outline: none;
+	border: none;
+	width: 250px;
+	background: transparent;
+	margin-left: 5px;
+	letter-spacing: 2px;
+	border-bottom: 1px solid #fff;
+
+}
+
+#output{
+	width: 150px;
+	height: 200px;
+	margin: 20px;
+	background: transparent;
+	border: 1px solid #fff;
+}
+
+
+/*buy*/
+
+.wrapper{
+	width: 98%;
+	margin: 10px auto ;
+}
+
+.vertical-nav{
+	width: 200px;
+	margin: 30px;
+	border: 1px solid #000000;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #163172 ;
+
+}
+
+
+.vertical-nav a{
+ 	border-bottom: 1px solid #fff;
+	color: #fff;
+	width: 200px;
+}
+
+/*footer*/
+footer{
+	background-color: #163172;
+	margin-top: auto;
+	width: 100%;
+	
+}
+
+footer p{
+	margin: 0;
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+	font-size: 14px;
+}
+
+
+/*book card*/
+.book-card{
+	display: inline-block;
+	margin:30px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 2px 3px rgba(69,90,100,.08);
+	width: 200px;
+	padding: 10px;
+	background: #cef7ff;
+	border: 1px solid #999;
+	color: #163172;
+	height: 350px;
+
+}
+
+.book-card .card{
+	border: none;
+	background: #cef7ff;
+}
+
+.book-card img{
+	width: 180px;
+	height: 180px;
+}
+
+.book-card p{
+	font-size: 18px;
+	width:180px;
+	text-overflow: ellipsis;
+	margin: 2px 4px;
+}
+
+.wrapper .links,
+.book-card .links{
+	margin: 5px;
+	width: 180px;
+}
+
+.wrapper .links a,
+.book-card .links a{
+	text-decoration: none;
+	color: #fff;
+	background: #163172;
+	padding: 5px;
+	border-radius: 3px;
+}
+.book-card .links a second-child{
+	margin-right: 0px;
+}
+
+
+/*book-Detail**/
+.wrapper{
+  margin: 30px auto;
+  width: 900px;
+ 
+  display: flex;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #163172;
+  box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+}
+
+.wrapper .left{
+  width: 50%;
+  background: linear-gradient(to right,#163172,#1e56a0);
+  padding: 30px 25px;
+  text-align: center;
+  color: #fff;
+}
+
+.wrapper .left img{
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.wrapper .left h4{
+  margin-bottom: 10px;
+}
+
+.wrapper .left p{
+  font-size: 16px;
+}
+
+.wrapper .right{
+  width: 70%;
+  background: #fff;
+  padding: 30px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wrapper .right .info,
+.wrapper .right .projects{
+  margin-bottom: 25px;
+}
+
+.wrapper .right .info h3,
+.wrapper .right .projects h3{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.wrapper .right .info_data,
+.wrapper .right .projects_data{
+
+  justify-content: space-between;
+}
+
+
+.wrapper .right .info_data .data h5,
+.wrapper .right .projects_data .data h5{
+    color: #353c4e;
+    margin-bottom: 5px;
+}
+
+.wrapper .right .info_data .data p,
+.wrapper .right .projects_data .data p{
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #919aa3;
+}
+
+.wrapper .links{
+	margin-top: 40px;	
+}
+
+.wrapper .links a{
+	padding: 10px;
+	border:	1px solid black; 
+}
+
+/*dashboard*/
+.sidebar{
+	width: 200px;
+	background: #163172;
+	margin-top:30px;
+	margin-left: 150px;
+	height: 300px;
+}
+
+.sidebar .card{
+	background: #0839ae;
+	color: #fff;
+}
+
+.sidebar .card img{
+	height: 100px;
+	width: 100px;
+	border-radius : 50px;
+	margin:10px;
+}
+
+/*dashboard*/
+.profile-content{
+	font: 'Poppins', san-serif;
+	margin-left: 50px;	
+	
+}
+
+.profile-content .register{
+	color: #5181f4;
+	width: 700px;
+	background:  #e6ebf999;
+	padding: 30px;
+	margin: 30px auto;
+	border: 1px solid #668dfb99;
+}
+
+.register h3{
+	border-bottom: 1px solid #2c3344;
+	margin: 5px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #2c3344;
+}
+
+.register .field{
+	display: flex;
+	padding: 10px;
+}
+
+.field h5{
+	color:#163172;
+}
+
+.field p{
+	margin-left: 5px;
+	font-size: 17px; 
+	letter-spacing: 1px;
+	color:#5181f4;
+}
+
+.register .field label{
+	color:#163172;
+	letter-spacing: 1px;
+	font-size: 18px;
+}
+
+.register .field input{
+	outline: none;
+	background: transparent;
+	border: none;
+	width: 100px;
+	border-bottom: 1px solid #163172; 
+	color: #5181f4;
+	margin-left: 5px;
+} 
+
+.table{
+	width: 722px;
+	
+
+}
+
+table{
+	margin: 30px auto;
+	border: 1px solid #163172;
+	background: #f9efefde;
+}
+
+table tr:first-child{
+	background-color:  #163172;
+	color: #fff; 
+}
+
+table td, 
+table th{
+	padding:5px 10px;
+	max-width: 500px;
+	justify-content: space-between;
+	text-align: center;
+}
+
+/*request*/
+.request{
+	width:350px;
+	margin:30px auto;
+	padding:20px;
+	background-color: #cdd3e13b;
+	border: 1px solid #163172;
+	height: 350px;
+}
+
+.sect{
+	width: 280px;
+	margin:10px auto;
+	padding:10px;
+	border-bottom: 1px solid #30343e6e;
+	display: flex;
+}
+.sect form{
+	width: 200px;
+}
+
+.request h3{
+	color:#2c3344;
+	text-transform: uppercase;
+	border-bottom: 1px solid #2c3344;
+	letter-spacing: 2px;
+	margin: 10px auto;
+}

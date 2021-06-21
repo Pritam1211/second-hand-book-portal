@@ -1,0 +1,77 @@
+ {{# if msg}}
+  <div class="alert alert-danger" role='alert' style="margin:10px;">{{msg}}</div>
+{{/if}}
+
+<div class="book-add">
+    <form class="add-book-form" action="/user/addBook" method="POST" enctype="multipart/form-data">
+      <div class="heading">
+        <h2>ADD BOOK</h2>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-field">
+            <label name="name">Name</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="input-field">
+            <label name="author">Author</label>
+            <input type="text" name="author" required>
+          </div>
+          <div class="input-field">
+            <label name="isbn">ISBN</label>
+            <input type="text" name="isbn" required>
+          </div>
+          <div class="input-field">
+            <label name="genre">Genre</label>
+            <select name='genre' class="form-select" aria-label="Default select example" style="width:250px;">
+              <option value = "Fiction" selected>Fiction</option>
+              <option value="Action">Action</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Horror">Horror</option>
+              <option value="Comic">Comedy</option>
+            </select>
+          </div>
+          <div class="input-field">
+            <label name="actualPrice">Actual Price</label>
+            <input id="actual_price" type="number" name="actualPrice" required>
+          </div>
+          <div class="input-field" style="width: 300px; border: none;">
+            
+            <input id="price" type="checkbox" name="proposed_price" style="width: 5px; margin-right: 5px;" onchange="document.getElementById('print_price').innerHTML = document.getElementById('actual_price').value*0.7+' Rs'" required>
+            <label name="proposed_price"> Calculate Proposed Price</label>
+      
+            <p id="print_price" style="margin-left: 30px;"></p>
+
+            <script type="text/javascript">
+              var price = document.getElementById("price");
+              console.log(price.value)
+              if(price.value=="on"){
+                var actual_price = document.getElementById("actual_price").value;
+                documet.getElementById('print_price').innerHTML = "actual_price*0.7";
+                price.value = actual_price*0.7;
+              }
+            </script>
+
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="input-field">
+            <label name="coverpage">Image</label>
+            <input type="file" accept="image/*" onchange="document.getElementById('output').src=window.URL.createObjectURL(this.files[0])" name="coverpage" style="border:none;" required />
+            <img id="output"/>
+          </div>
+
+          <div class="input-field">
+            <label name="description">Description</label>
+            <textarea name="description" style="width: 250px; height: 100px; background: transparent; border: 1px solid #fff; color:#fff;" required></textarea> 
+          </div>
+
+           <center>
+              <button type="submit" class="btn btn-primary" style="margin-left: 50px; width: 200px; margin-bottom: 20px;">Submit</button>
+            </center>
+
+        </div>
+      </div>
+    </form>
+  </div>

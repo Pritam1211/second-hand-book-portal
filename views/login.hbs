@@ -1,0 +1,31 @@
+  
+{{# if er}}
+  <div class="alert alert-danger" role='alert' >
+  {{er}}
+  </div>
+{{/if}}
+
+  <div class="login">
+    <form class="login-form" method="POST" action="/login">
+      <div class="heading">
+        LogIn
+      </div>
+      <div>
+        <div class="input-field">
+          <i class="fa fa-user" style="font-size:20px;"></i>
+          <input type="text" name="username" placeholder="Username">
+        </div>
+        <div class="input-field">
+          <i class="fa fa-key"></i>
+          <input type="password" name="password" placeholder="Password">
+        </div>
+      </div>
+      <center>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      <div>Are you<a class="link" href="admin-login">Admin</a></div>
+      </center>
+    </form>
+    <div class="signup">
+      Don't Have Account <span><a class="link" href="register">Register</a></span>
+    </div>
+  </div>

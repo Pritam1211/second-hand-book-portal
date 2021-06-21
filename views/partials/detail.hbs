@@ -1,0 +1,47 @@
+<div class = "register">
+  <div class="section">
+    <h3>Personal</h3>
+    <div class="field">
+      <h5> Name: </h5>
+      <p>{{user.first_name}}&nbsp;{{user.middle_name}}&nbsp;{{user.last_name}}</p>
+    </div> 
+     <div style="display: flex;">  
+      <div class="field">
+        <h5> Gender: </h5>
+        <p>{{user.gender}}</p>
+      </div>  
+      <div class="field" style="margin-left: 50px;">
+        <h5>Complaints: </h5>
+        <p>{{user.report_count}}</p>
+      </div>
+    </div>  
+  </div>
+  <div class="section">
+    <h3>Address</h3>
+    <div class="field">
+      <h5>Address: </h5>
+      <p>{{user.address}}</p>
+    </div>
+    <div style="display: flex;">  
+      <div class="field">
+        <h5> City: </h5>
+        <p>{{user.city}}</p>
+      </div>  
+      <div class="field" style="margin-left: 50px;">
+        <h5>Pin: </h5>
+        <p>{{user.pin}}</p>
+      </div>
+    </div>      
+ </div>
+ <div class="section">
+  <h3>Contact</h3>
+    <div class="field">
+      <h5>Phone No.: </h5>
+      <p>{{user.phone_no}}</p>
+    </div>  
+    <div class="field">
+      <h5> Email: </h5>
+      <p>{{user.email_id}}</p>
+    </div>  
+  </div>
+</div>

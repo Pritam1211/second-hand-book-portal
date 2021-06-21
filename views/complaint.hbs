@@ -1,0 +1,44 @@
+{{# if msg}}
+  <div class="alert alert-info" role='alert' >
+  {{msg}}
+  </div>
+{{/if}}
+
+
+<div class="table">
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Reporter</th>
+			<th>Victim</th>
+			<th>Victim ID</th>
+			<th>Report Count</th>
+			<th>Complaint</th>
+			<th style="width:100px;">Action</th>
+		</tr>
+	
+	{{#each complaint}}
+	<tr>
+		<td>{{this.date}}</td>
+		<td>{{this.reporter_name}}</td>
+		<td>{{this.victim_name}}</td>
+		<td>{{this.victim}}</td>
+		<td>{{this.report_count}}</td>
+		<td>{{this.reason}}</td>
+		{{#if this.ac}}
+			<td> Taken<td>
+		{{else}}
+			<td>
+				<form method="POST" action="/admin/action">
+					<input type="hidden" name="report" value={{this.report_count}}>
+					<input type="hidden" name="id" value={{this.victim}}>
+					<input type="hidden" name="comp_id" value={{this.report_id}} >
+					<button type="submit" class="btn btn-primary">Action</button>
+				</form>
+			</td>
+		{{/if}}
+	</tr>
+	{{/each}}
+
+	</table>
+</div>

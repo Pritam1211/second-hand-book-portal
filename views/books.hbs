@@ -1,0 +1,28 @@
+<div class="table">
+	<table>
+		<tr>
+			<th>Book Id</th>
+			<th>Name</th>
+			<th>Author</th>
+			<th>Genre</th>
+			<th>Isbn</th>
+			<th>Actual Price</th>
+			<th>Proposed Price</th>
+			<th>Coverpage</th>
+		</tr>
+	
+	{{#each book}}
+	<tr>
+		<td>{{this.book_id}}</td>
+		<td>{{this.name}}</td>
+		<td>{{this.author}}</td>
+		<td>{{this.genre}}</td>
+		<td>{{this.isbn}}</td>
+		<td>{{this.actual_price}} Rs</td>
+		<td>{{this.proposed_id}} Rs</td>
+		<td>{{this.coverpage}}</td>
+	</tr>
+	{{/each}}
+
+	</table>
+</div>

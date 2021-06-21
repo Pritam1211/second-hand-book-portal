@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div class="left">
+        <img src="images/{{book.coverpage}}" 
+        alt="user" width="200" height="250">
+        <h4>{{book.name}}</h4>
+         <p>{{book.author}}</p>
+          <div class="links" style="margin: 30px auto">
+          {{# if status}}
+          <form method="POST" action="/user/request" >
+            <input type="hidden" name="id" value={{{book.book_id}}} >
+            <button type="submit" class="btn btn-primary">Request</button>
+          </form>
+          {{/if}}
+          </div>
+    </div>
+    <div class="right">
+      <div class="info">
+          <h3>Information</h3>
+          <div class="info_data">
+               <div class="data">
+                    <h5>Description:</h5>
+                  <p> {{book.description}} </p>
+               </div>
+               <div class="data">
+                 <h5>Genre:  </h5>
+                  <p>{{book.genre}}</p>
+               </div>
+            </div>
+      </div>
+      
+      <div class="projects">
+            <h3>Price</h3>
+            <div class="projects_data" style="display:flex;">
+                 <div class="data" style="width:200px;">
+                    <h5>Actual:</h5>
+                    <p>&nbsp;{{book.actual_price}} Rs</p>
+                 </div>
+                 <div class="data" style="margin-left=0px;">
+                   <h5>Proposed:  </h5>
+                    <p>&nbsp;{{book.proposed_id}} Rs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              </div>
+            </div>
+      </div>
+      <div class="projects">
+            <h3>status</h3>
+            <div class="projects_data" style="display:flex;">
+                 <div class="data">
+                    <h5>Status:  </h5>
+                    <p>&nbsp;{{book.status}}</p>
+                 </div>
+                
+            </div>
+      </div>
+    </div>
+
+  </div>

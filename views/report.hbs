@@ -1,0 +1,31 @@
+{{# if er}}
+  <div class="alert alert-danger" role='alert' >
+  {{er}}
+  </div>
+{{/if}}
+{{# if msg}}
+  <div class="alert alert-info" role='alert' >
+  {{msg}}
+  </div>
+{{/if}}
+<div class="profile-content" style="margin: 10px auto;">
+	
+	<form method="POST" action="/user/report" class="register" style="width: 400px;">
+		<center><h3>Report</h3></center> 
+		<div class="field" style="flex-direction: column;">
+	      <label name="name">Name</label>
+	      <input type="text" name="name" style="width:300px; color: #000;" required>
+	    </div> 
+	    <div class="field" style="flex-direction: column;">
+	      <label name="email">Email Id</label>
+	      <input type="text" name="email" style="width:300px; color: #000;" required>
+	    </div>   
+	    <div class="field" style=" flex-direction: column;">
+	      <label name="reason">Reason</label>
+	      <textarea type="text" name="reason" style="height: 100px; background: transparent; border: 1px solid #163172; " required ></textarea>
+	    </div>  
+		 <center><button type="submit" class="btn btn-primary" style="margin:10px auto;">Submit</button></center>
+
+	</form>
+
+</div>

@@ -1,0 +1,44 @@
+{{# if msg}}
+  <div class="alert alert-info" role='alert' >
+  {{msg}}
+  </div>
+{{/if}}
+
+
+<div class="table">
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>Pin</th>
+			<th>Phone No</th>
+			<th>Email Id</th>
+			<th>Report Count</th>
+			<th>Delete</th>
+		</tr>
+	
+	{{#each user}}
+	<tr>
+		<td>{{this.user_id}}</td>
+		<td>{{this.first_name}}&nbsp;{{this.middle_name}}&nbsp;{{this.last_name}}</td>
+		<td>{{this.gender}}</td>
+		<td>{{this.address}}</td>
+		<td>{{this.city}}</td>
+		<td>{{this.pin}} Rs</td>
+		<td>{{this.phone_no}} Rs</td>
+		<td>{{this.email_id}}</td>
+		<td>{{this.report_count}}</td>
+		<td>
+			<form method="POST" action="/admin/users">
+				<input type="hidden" name="id" value={{this.user_id}} >
+				<button type="submit" class="btn btn-primary">Delete</button>
+			</form>
+		</td>
+	</tr>
+	{{/each}}
+
+	</table>
+</div>

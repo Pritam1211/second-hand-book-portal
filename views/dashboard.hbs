@@ -1,0 +1,28 @@
+<div style="display: flex;">
+	<div class = "sidebar">
+		<div class="card">
+		  <center><img src="http://guarddome.com/assets/images/profile-img.jpg" class="card-img-top"></center>
+		  <div class="card-body">
+		    <center>
+		    	<h5 class="card-title">{{user.first_name}}&nbsp;{{user.last_name}}</h5>
+			</center>
+		  </div>
+		  <ul class="list-group list-group-flush" >
+		    <li class="list-group-item" style="color: #2c3344; background-color: #0839ae; border-bottom: 1px solid #fff;"><a class="nav-link" href="dashboard?action=detail" style="color: #fff; font-size: 18px; letter-spacing: 1px;">Detail</a></li>
+		    <li class="list-group-item" style=" background-color: #0839ae; border-bottom: 1px solid #fff;"><a class="nav-link" href="dashboard?action=edit" style="color: #fff; font-size: 18px; letter-spacing: 1px;">Edit</a></li>
+		  </ul>
+		  
+		</div>
+	</div>
+
+	<div class="profile-content">
+		
+		{{# if content}}
+		{{>detail}}
+		{{else}}
+		{{>edit}}
+
+		{{/if}}
+		
+	</div>
+</div>

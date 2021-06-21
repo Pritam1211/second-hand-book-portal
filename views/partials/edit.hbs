@@ -1,0 +1,36 @@
+<form class = "register" method="POSt" action="/user/edit">
+  <div class="section" style="margin: 10px;">
+    <h3>Personal</h3>
+    <div class="field">
+      <lable style="color: #163172;">Name:</lable>
+      <input type="text" name="fname" required>
+      <input style="margin-left: 15px;" type="text" name="mname" required>
+      <input style="margin-left: 15px;" type="text" name="lname" required>
+    </div> 
+  </div>
+  <div class="section" style="margin: 10px;">
+    <h3>Address</h3>
+    <div class="field">
+      <label>Address:</label>
+      <input type="text" name="add" style="width:100%;" required>
+    </div>
+    <div style="display: flex;">  
+      <div class="field">
+        <label>City:</label>
+        <input type="text" name="city" required="">
+      </div>  
+      <div class="field" style="margin-left: 50px;">
+        <label>Pin:</label>
+        <input type="number" name="pin">
+      </div>
+    </div>      
+ </div>
+ <div class="section" style="margin: 10px;">
+  <h3>Contact</h3>
+    <div class="field">
+      <label>Phone No:</label>
+      <input type="text" name="phone" style="width:200px;" required>
+    </div>   
+  </div>
+  <center><button type="submit" class="btn btn-primary" style="margin:20px auto;">Submit</button></center>
+</form>
